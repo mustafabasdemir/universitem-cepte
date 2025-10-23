@@ -1,17 +1,21 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { useTranslation } from 'react-i18next';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 export default function TopNav() {
+  const { t } = useTranslation();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Üniversitem Cepte</Text>
+      <Text style={styles.title}>{t('appTitle')}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    height: 60,
+    height: hp('7%'),
     backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
@@ -19,7 +23,7 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
   },
   title: {
-    fontSize: 18,
+    fontSize: hp('2.2%'),
     fontWeight: '600',
   },
 });
