@@ -37,7 +37,7 @@ export default function TopNav() {
         resizeMode="contain"
       />
 
-      {/* Dil Değiştirici */}
+      {/* Dil degistir */}
       <View
         style={[
           styles.toggleWrapper,
@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: wp('4%'),
-    paddingVertical: hp('1.5%'),
-    borderBottomWidth: 1,
+    paddingVertical: hp('1%'),
+    borderBottomWidth: 0.5,
   },
   logo: {
     width: wp('18%'),
@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderRadius: 14,
     overflow: 'hidden',
-    width: wp('34%'),
-    height: Platform.OS === 'ios' ? hp('4.5%') : hp('5%'),
+    width: wp('25%'),
+    height: Platform.OS === 'ios' ? hp('4%') : hp('4%'),
   },
   toggleBtn: {
     flex: 1,

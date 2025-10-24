@@ -1,15 +1,30 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import Carousel from '../components/Home/Carousel';
+import MenuGrid from '../components/Home/MenuGrid';
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Ana Sayfa İçeriği</Text>
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+      <Carousel />
+      <MenuGrid />
+      <Text style={styles.sectionTitle} allowFontScaling={false}>
+        Ana Sayfa İçeriği
+      </Text>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  text: { fontSize: 18 },
+  container: {
+    paddingHorizontal: "3%",
+    paddingBottom: 40,
+    backgroundColor: '#fff',  //F5F5FF
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    marginTop: 20,
+    textAlign: 'center',
+  },
 });

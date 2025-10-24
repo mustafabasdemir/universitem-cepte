@@ -1,0 +1,14 @@
+[
+  { "id": 1, "title": "Kütüphane", "icon": "book", "link": "https://kutuphane.bseu.edu.tr" },
+  { "id": 2, "title": "AVESİS", "icon": "shapes", "link": "https://avesis.bseu.edu.tr" },
+  { "id": 3, "title": "BŞEÜ-KAYSİS", "icon": "file-alt", "link": "https://kaysis.gov.tr" },
+  { "id": 4, "title": "EBYS", "icon": "desktop", "link": "https://ebys.bseu.edu.tr" },
+  { "id": 5, "title": "Rehber", "icon": "address-book", "link": "https://rehber.bseu.edu.tr" },
+  { "id": 6, "title": "OBS", "icon": "graduation-cap", "link": "https://obs.bseu.edu.tr" },
+  { "id": 7, "title": "EBS", "icon": "clipboard-list", "link": "https://ebs.bseu.edu.tr" },
+  { "id": 8, "title": "Sofra", "icon": "utensils", "link": "https://yemekhane.bseu.edu.tr" },
+  { "id": 9, "title": "Akıllı Kart", "icon": "id-card", "link": "https://kart.bseu.edu.tr" },
+  { "id": 10, "title": "E-Posta", "icon": "envelope", "link": "https://posta.bseu.edu.tr" },
+  { "id": 11, "title": "Dergilerimiz", "icon": "pen", "link": "https://dergi.bseu.edu.tr" },
+  { "id": 12, "title": "Kulüpler", "icon": "users", "link": "https://ogrenci.bseu.edu.tr" }
+]

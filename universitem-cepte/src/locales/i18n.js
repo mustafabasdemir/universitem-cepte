@@ -5,7 +5,7 @@ import tr from './tr.json';
 import en from './en.json';
 
 
-const deviceLang = Localization?.locale ? Localization.locale.split('-')[0] : 'en';
+const deviceLang = Localization?.locale ? Localization.locale.split('-')[0] : 'tr';
 
 // 🚀 i18n yapılandırması
 i18n
