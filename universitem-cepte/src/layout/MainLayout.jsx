@@ -1,17 +1,19 @@
 import React from 'react';
 import { StatusBar, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import TopNav from '../components/Navbar/TopNav';
+import BottomNav from '../components/Navbar/BottomNav';
 
-const MainLayout = ({ children }) => {
+export default function MainLayout({ children, navigation }) {
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <TopNav />
       <View style={styles.container}>{children}</View>
+      <BottomNav navigation={navigation} />
     </SafeAreaView>
   );
-};
-
-export default MainLayout;
+}
 
 const styles = StyleSheet.create({
   safeArea: {

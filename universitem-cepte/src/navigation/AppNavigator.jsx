@@ -4,12 +4,10 @@ import TabNavigator from './TabNavigator';
 
 const Stack = createNativeStackNavigator();
 
-function AppNavigator() {
+export default function AppNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Main" component={TabNavigator} />
     </Stack.Navigator>
   );
 }
-
-export default AppNavigator;

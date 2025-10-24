@@ -2,25 +2,38 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import SettingsScreen from '../screens/SettingsScreen';
-import BottomNav from '../components/Navbar/BottomNav';
-import TopNav from '../components/Navbar/TopNav';
+import CalendarScreen from '../screens/CalendarScreen';
 import MainLayout from '../layout/MainLayout';
 
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
   return (
-    <MainLayout>
-      <TopNav />
-      <Tab.Navigator
-        screenOptions={{ headerShown: false }}
-        tabBar={(props) => <BottomNav {...props} />} 
-      >
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Profile" component={ProfileScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </MainLayout>
+    <Tab.Navigator screenOptions={{ headerShown: false }} tabBar={() => null}>
+      <Tab.Screen
+        name="Home"
+        children={(props) => (
+          <MainLayout {...props}>
+            <HomeScreen {...props} />
+          </MainLayout>
+        )}
+      />
+      <Tab.Screen
+        name="Profile"
+        children={(props) => (
+          <MainLayout {...props}>
+            <ProfileScreen {...props} />
+          </MainLayout>
+        )}
+      />
+      <Tab.Screen
+        name="Calendar"
+        children={(props) => (
+          <MainLayout {...props}>
+            <CalendarScreen {...props} />
+          </MainLayout>
+        )}
+      />
+    </Tab.Navigator>
   );
 }
