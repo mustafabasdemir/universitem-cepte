@@ -1,25 +1,34 @@
+
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, FlatList } from 'react-native';
 import Carousel from '../components/Home/Carousel';
 import MenuGrid from '../components/Home/MenuGrid';
+import AnnouncementTabs from "../components/Home/AnnouncementTabs";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 export default function HomeScreen() {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Carousel />
-      <MenuGrid />
-      <Text style={styles.sectionTitle} allowFontScaling={false}>
-        Ana Sayfa İçeriği
-      </Text>
-    </ScrollView>
+    <FlatList
+      ListHeaderComponent={
+        <>
+          <Carousel />
+          <MenuGrid />
+          <AnnouncementTabs />
+        </>
+      }
+      data={[]} // boş veri çünkü sadece header’ı göstereceğiz
+      renderItem={null}
+      contentContainerStyle={styles.container}
+    />
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: "3%",
+    paddingHorizontal: wp('3%'),
     paddingBottom: 40,
     backgroundColor: '#fff',  //F5F5FF
+    paddingBottom: hp("10%"),
   },
   sectionTitle: {
     fontSize: 18,
@@ -28,3 +37,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+
+
+
+

@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#F5F5FF',
     borderRadius: 20,
-    marginTop: hp('2%'),
+    marginTop: hp('1%'),
     paddingVertical: hp('2%'),
     paddingHorizontal: wp('2%'),
   },
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   title: {
     marginTop: hp('0.7%'),
-    fontSize: hp('1.2%'),
+    fontSize: hp('1.1%'),
     fontWeight: '500',
     color: '#3c3c3c',
     textAlign: 'center',
